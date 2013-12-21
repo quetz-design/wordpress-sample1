@@ -5,3 +5,113 @@ Theme URI: http://54.200.168.44/
 Description: company official theme
 */
 
+/*-------------
+base
+-------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
+form,input,p,blockquote,th,td {
+margin:0;
+padding:0;
+}
+img {
+border:0;
+vertical-align: top;
+}
+body {
+background: url(images/bg_body.png) repeat 0 0;
+font-size: 62.5%;
+font-family: " メイリオ",Meiryo,Osaka," ヒラギノ角ゴ ProW3","Hiragino Kaku Gothic Pro"," ＭＳ Ｐゴシック","MSPGothic",sans-serif;
+}
+
+
+
+a{
+	outline: none;
+	color: #429ad2;
+}
+a:hover {
+	text-decoration: none;
+}
+ul,ol {
+	list-style: none;
+}
+.fLeft {
+	float: left;
+}
+.fRight {
+	float: right;
+}
+
+/*-------------
+header
+-------------*/
+#header {
+	margin-bottom: 10px; 
+	width: 100%;
+	border-bottom: 1px solid #878787;
+	background: #efeeeb url(images/bg_header.gif) repeat-x left top;
+}
+#header-inner {
+	margin: 0 auto; 
+	width: 960px;
+}
+#header-top {
+	height: 81px;
+	font-size:1.1em;
+}
+#header-top h1 { 
+	padding-top: 18px;
+}
+#header-top p {
+	padding-top: 3px; 
+	color: #797979;
+}
+#header-top ul {
+	text-align: right;
+}
+#header-top ul li { 
+	display: inline;
+}
+#header-top ul li a {
+	padding: 3px 5px 2px;
+	color: #fff;
+	text-decoration: none;
+}
+#header-top ul a:hover { 
+	text-decoration: underline;
+}
+#header-top ul a.sitemap { 
+	padding-left: 18px;
+	background: #00b5de url(images/icon_arr_white.gif) no-repeat 5px center;
+}
+#header-top ul a.rss{ 
+	padding-left: 23px;
+	background: #00b5de url(images/icon_rss.gif) no-repeat 5px center;
+}
+
+/*nav*/
+#header-nav { 
+	clear: both;
+}
+#header-nav ul#menu-nav {
+	height: 46px;
+	background: url(images/bg_nav.gif) no-repeat left top;
+}
+#header-nav ul li.menu-item a{ 
+	display: block; 
+	width: 160px; 
+	height: 46px;
+	background: url(images/bg_nav_btn.gif) no-repeat left top;
+	color: #333;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.4em;
+	line-height: 46px; 
+}
+
+
+#header-nav ul li.menu-item a:hover, 
+#header-nav ul li.current-menu-item a {
+	background: url(images/bg_nav_btn.gif) no-repeat left -46px;
+}
