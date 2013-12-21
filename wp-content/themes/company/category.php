@@ -11,15 +11,15 @@
 				<?php while(have_posts()): the_post(); ?>
 				<dt><?php the_time('Y/m/d'); ?></dt>
 				<?php
-					$cats = the_category();
+					$cats = get_the_category();
 					$cats = $cats[0];
 				?>
-				<dd class="<?php $cats->category_nicename ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></dd>
+				<dd class="<?php echo $cats->category_nicename ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></dd>
 				<?php endwhile; ?>
 			</dl>
 			<?php endif; ?>
 		</div>
-
+		<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
 	</div>
 	<?php get_sidebar(); ?>
 </div>
