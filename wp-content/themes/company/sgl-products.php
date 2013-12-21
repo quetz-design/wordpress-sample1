@@ -6,6 +6,7 @@
 		<div class="product-left">
 			<?php if(has_post_thumbnail()): ?>
 				<?php the_post_thumbnail('medium'); ?>
+				<p><?php the_tags('Color:'); ?></p>
 			<?php else: ?>
 				<img src="<?php bloginfo('template_url'); ?>/images/noimages.gif" alt="">
 			<?php endif; ?>
