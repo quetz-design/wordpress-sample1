@@ -25,7 +25,13 @@
 			</div>
 		</div>
 		<div id="header-nav"><?php wp_nav_menu(array('theme_location' => 'nav')); ?></div>
-		<div id="header-gra"><img src="<?php bloginfo('template_url'); ?>/images/gra_main.jpg" alt=""></div>
+		<div id="header-gra">
+			<?php if(is_home()): ?>
+				<img src="<?php bloginfo('template_url'); ?>/images/gra_main.jpg" alt="">
+			<?php else: ?>
+				<img src="<?php bloginfo('template_url'); ?>/images/gra_news.jpg" alt="">
+			<?php endif; ?>
+		</div>
 	</div>
 </div>
 <!-- /header -->
