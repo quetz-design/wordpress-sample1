@@ -33,6 +33,8 @@
 				<img src="<?php bloginfo('template_url'); ?>/images/gra_products.jpg" alt="">
 			<?php elseif(is_page(array('company', 'access'))): ?>
 				<img src="<?php bloginfo('template_url'); ?>/images/gra_company.jpg" alt="">
+			<?php elseif(is_page('contact')): ?>
+				<img src="<?php bloginfo('template_url'); ?>/images/gra_contact.jpg" alt="">
 			<?php else: ?>
 				<img src="<?php bloginfo('template_url'); ?>/images/gra_news.jpg" alt="">
 			<?php endif; ?>
