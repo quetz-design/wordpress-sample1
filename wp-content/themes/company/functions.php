@@ -7,4 +7,7 @@ register_sidebar(array(
 	'name'=>'パンくずリスト'
 	));
 
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 110, 110, true );
+
 ?>
