@@ -29,7 +29,7 @@
 		<div id="header-gra">
 			<?php if(is_home()): ?>
 				<img src="<?php bloginfo('template_url'); ?>/images/gra_main.jpg" alt="">
-			<?php elseif(is_category(array('products', 'products_a', 'product_b', 'product_c', 'product_d'))): ?>
+			<?php elseif(is_category(array('products', 'products_a', 'products_b', 'products_c', 'products_d'))||in_category(array('products_a', 'products_b', 'products_c', 'products_d'))): ?>
 				<img src="<?php bloginfo('template_url'); ?>/images/gra_products.jpg" alt="">
 			<?php else: ?>
 				<img src="<?php bloginfo('template_url'); ?>/images/gra_news.jpg" alt="">
