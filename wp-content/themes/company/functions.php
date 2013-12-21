@@ -10,4 +10,6 @@ register_sidebar(array(
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 110, 110, true );
 
+register_nav_menus(array('nav'=>'ナビゲーション', 'sitemap'=>'サイトマップ'));
+
 ?>

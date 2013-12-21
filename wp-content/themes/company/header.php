@@ -35,6 +35,8 @@
 				<img src="<?php bloginfo('template_url'); ?>/images/gra_company.jpg" alt="">
 			<?php elseif(is_page('contact')): ?>
 				<img src="<?php bloginfo('template_url'); ?>/images/gra_contact.jpg" alt="">
+			<?php elseif(is_page('sitemap')): ?>
+				<img src="<?php bloginfo('template_url'); ?>/images/gra_sitemap.jpg" alt="">
 			<?php else: ?>
 				<img src="<?php bloginfo('template_url'); ?>/images/gra_news.jpg" alt="">
 			<?php endif; ?>
