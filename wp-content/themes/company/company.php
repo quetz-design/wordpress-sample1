@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Company
+*/
+?>
 <?php get_header(); ?>
 <div id="container">
 	<div id="contents">
