@@ -6,6 +6,7 @@
 	<title><?php bloginfo('name'); ?></title>
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php bloginfo('rss2_url'); ?>">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+	<?php wp_head(); ?>
 </head>
 <body>
 <!-- header -->
