@@ -1,6 +1,32 @@
 <?php get_header(); ?>
 <div id="container">
 	<div id="contents">
+		<?php 
+			$pickup = array(
+				'category_name'=>'news',
+				'post_per_page' =>2,
+				'post__in'=>get_option('sticky_posts'));
+			query_posts($pickup);
+		?>
+		<?php if(have_posts()): while(have_posts()): the_post(); ?>
+		<div class="box pick-up">
+			<?php
+					$cats = get_the_category();
+					$cats = $cats[0];
+			?>
+			<h2 class="pick-<?php echo $cats->category_nicename; ?>"><img src="<?php bloginfo('template_url'); ?>/images/ttl_pick_news.gif" alt=""></h2>
+			<?php if(has_post_thumbnail()): ?>
+				<?php the_post_thumbnail(); ?>
+			<?php else: ?>
+				<img src="<?php bloginfo('template_url'); ?>/images/pickup.gif" alt="PICKUP">
+			<?php endif; ?>
+			<div class="pickup-inner">
+				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<span><?php the_time('Y/m/d'); ?></span><?php the_excerpt(); ?>
+			</div>
+		</div>
+		<?php endwhile; endif; wp_reset_query(); ?>
+
 		<div id="news" class="box">
 			<div class="section-header">
 				<h2><img src="<?php bloginfo('template_url'); ?>/images/ttl_news.gif" alt=""></h2>
@@ -15,7 +41,7 @@
 					$cats = get_the_category();
 					$cats = $cats[0];
 				?>
-				<dd class="<?php echo $cats->category_nicename; ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></dd>
+				<dd class="<?php echo $cats->category_nicename; ?>"><a href="<?php the_permalink(); ?>" <?php if(has_post_format('gallery')) echo 'class="photo"' ?>><?php the_title(); ?></a><?php the_excerpt(); ?></dd>
 				<?php endwhile; ?>
 			</dl>
 			<?php endif; wp_reset_query(); ?>

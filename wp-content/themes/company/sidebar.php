@@ -1,4 +1,7 @@
 <div id="sidebar">
+	<?php if(is_active_sidebar(2)): ?>
+	<?php dynamic_sidebar(2); ?>
+	<?php endif; ?>
 	<div class="side-nav">
 		<h2><img src="<?php bloginfo('template_url'); ?>/images/side_ttl_color.gif" alt="PRODUCTS COLOR"></h2>
 		<?php wp_tag_cloud('smallest=1&largest=1&unit=em&format=list'); ?>

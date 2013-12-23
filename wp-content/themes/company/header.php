@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <!-- header -->
 <div id="header">
 	<div id="header-inner">
@@ -23,12 +23,15 @@
 					<li><a href="<?php bloginfo('url'); ?>/sitemap/" class="sitemap">サイトマップ</a></li>
 					<li><a href="<?php bloginfo('rss2_url'); ?>" class="rss">RSS FEED</a></li>
 				</ul>
+				<?php get_search_form(); ?>
 			</div>
 		</div>
 		<div id="header-nav"><?php wp_nav_menu(array('theme_location' => 'nav')); ?></div>
 		<div id="header-gra">
-			<?php if(is_home()): ?>
-				<img src="<?php bloginfo('template_url'); ?>/images/gra_main.jpg" alt="">
+			<?php if(is_home() || is_404()): ?>
+				<img src="<?php header_image(); ?>" alt="">
+			<?php elseif(is_search()): ?>
+				<img src="<?php bloginfo('template_url'); ?>/images/gra_search.jpg" alt="">
 			<?php elseif(is_category(array('products', 'products_a', 'products_b', 'products_c', 'products_d'))||in_category(array('products_a', 'products_b', 'products_c', 'products_d'))): ?>
 				<img src="<?php bloginfo('template_url'); ?>/images/gra_products.jpg" alt="">
 			<?php elseif(is_page(array('company', 'access'))): ?>

@@ -14,7 +14,7 @@
 					$cats = get_the_category();
 					$cats = $cats[0];
 				?>
-				<dd class="<?php echo $cats->category_nicename ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php the_excerpt(); ?></dd>
+				<dd class="<?php echo $cats->category_nicename ?>"><a href="<?php the_permalink(); ?>" <?php if(has_post_format('gallery')) echo 'class="photo"' ?>><?php the_title(); ?></a><?php the_excerpt(); ?></dd>
 				<?php endwhile; ?>
 			</dl>
 			<?php endif; ?>
