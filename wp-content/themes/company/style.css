@@ -686,6 +686,7 @@ contents
 }
 #topics ul li img {
 	margin-bottom: 3px;
+	display:inline-block;
 }
 #topics ul li span {
 	color: #999;
